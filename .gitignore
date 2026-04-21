@@ -8,3 +8,5 @@ __pycache__/
 backend/.coverage
 backend/htmlcov/
 .omx
+/backend/runs
+/node_modules

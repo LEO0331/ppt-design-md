@@ -1,0 +1,26 @@
+{
+  "name": "ppt-design-md",
+  "version": "1.0.0",
+  "description": "`pptx-design-md` is a production-oriented MVP that extracts a PowerPoint deck's visual system and generates a `design.md` file for LLM-guided slide generation.",
+  "main": "index.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LEO0331/ppt-design-md.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LEO0331/ppt-design-md/issues"
+  },
+  "homepage": "https://github.com/LEO0331/ppt-design-md#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.59.1"
+  }
+}

@@ -89,3 +89,30 @@ def test_save_design_rejects_invalid_run_id() -> None:
         json={"run_id": "../../tmp/owned", "design_md": "# DESIGN.md\n\nx"},
     )
     assert res.status_code == 404
+
+
+def test_extract_rejects_unsupported_content_type() -> None:
+    client = TestClient(app)
+    payload = _pptx_bytes()
+    res = client.post(
+        "/extract",
+        files={"file": ("sample.pptx", payload, "text/plain")},
+    )
+    assert res.status_code == 400
+    assert "Unsupported content type" in res.json()["detail"]
+
+
+def test_extract_batch_rejects_empty_request() -> None:
+    client = TestClient(app)
+    res = client.post("/extract/batch", files=[])
+    assert res.status_code == 422
+
+
+def test_extract_batch_rejects_non_pptx_extension() -> None:
+    client = TestClient(app)
+    res = client.post(
+        "/extract/batch",
+        files=[("files", ("bad.txt", b"PKfake", "application/octet-stream"))],
+    )
+    assert res.status_code == 400
+    assert "Only .pptx files are supported" in res.json()["detail"]

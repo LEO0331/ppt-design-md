@@ -1,0 +1,1119 @@
+{
+  "presentation": {
+    "slide_width_in": 13.333,
+    "slide_height_in": 7.5,
+    "aspect_ratio": 1.778
+  },
+  "theme": {
+    "candidate_fonts": [],
+    "candidate_colors": [],
+    "common_font_sizes_pt": [],
+    "theme_fonts": [],
+    "theme_colors": []
+  },
+  "slides": [
+    {
+      "slide_index": 1,
+      "background": null,
+      "elements": [
+        {
+          "type": "text",
+          "bbox": {
+            "x_in": 2.012,
+            "y_in": 1.323,
+            "w_in": 9.305,
+            "h_in": 5.433,
+            "x_pct": 15.09,
+            "y_pct": 17.64,
+            "w_pct": 69.79,
+            "h_pct": 72.44
+          },
+          "text_sample": "Presentation \u000btitle",
+          "font_family": null,
+          "font_size_pt": null,
+          "font_bold": null,
+          "font_italic": null,
+          "fill_color": null,
+          "line_color": null,
+          "text_color": null
+        }
+      ]
+    },
+    {
+      "slide_index": 2,
+      "background": null,
+      "elements": [
+        {
+          "type": "text",
+          "bbox": {
+            "x_in": 4.328,
+            "y_in": 0.931,
+            "w_in": 4.676,
+            "h_in": 2.165,
+            "x_pct": 32.46,
+            "y_pct": 12.41,
+            "w_pct": 35.07,
+            "h_pct": 28.87
+          },
+          "text_sample": "Agenda",
+          "font_family": null,
+          "font_size_pt": null,
+          "font_bold": null,
+          "font_italic": null,
+          "fill_color": null,
+          "line_color": null,
+          "text_color": null
+        },
+        {
+          "type": "text",
+          "bbox": {
+            "x_in": 4.317,
+            "y_in": 3.096,
+            "w_in": 4.676,
+            "h_in": 2.909,
+            "x_pct": 32.38,
+            "y_pct": 41.28,
+            "w_pct": 35.07,
+            "h_pct": 38.79
+          },
+          "text_sample": "Introduction Building confidence Engaging the audience Visual aids Final tips & takeaways",
+          "font_family": null,
+          "font_size_pt": null,
+          "font_bold": null,
+          "font_italic": null,
+          "fill_color": null,
+          "line_color": null,
+          "text_color": null
+        },
+        {
+          "type": "text",
+          "bbox": {
+            "x_in": 12.655,
+            "y_in": 6.81,
+            "w_in": 0.69,
+            "h_in": 0.69,
+            "x_pct": 94.91,
+            "y_pct": 90.8,
+            "w_pct": 5.18,
+            "h_pct": 9.2
+          },
+          "text_sample": "2",
+          "font_family": null,
+          "font_size_pt": null,
+          "font_bold": null,
+          "font_italic": null,
+          "fill_color": null,
+          "line_color": null,
+          "text_color": null
+        }
+      ]
+    },
+    {
+      "slide_index": 3,
+      "background": null,
+      "elements": [
+        {
+          "type": "text",
+          "bbox": {
+            "x_in": 0.804,
+            "y_in": 1.159,
+            "w_in": 6.571,
+            "h_in": 4.847,
+            "x_pct": 6.03,
+            "y_pct": 15.45,
+            "w_pct": 49.28,
+            "h_pct": 64.63
+          },
+          "text_sample": "The power of communication",
+          "font_family": null,
+          "font_size_pt": null,
+          "font_bold": null,
+          "font_italic": null,
+          "fill_color": null,
+          "line_color": null,
+          "text_color": null
+        },
+        {
+          "type": "shape",
+          "bbox": {
+            "x_in": 8.182,
+            "y_in": 0.964,
+            "w_in": 4.7,
+            "h_in": 5.4,
+            "x_pct": 61.37,
+            "y_pct": 12.85,
+            "w_pct": 35.25,
+            "h_pct": 72.0
+          },
+          "text_sample": null,
+          "font_family": null,
+          "font_size_pt": null,
+          "font_bold": null,
+          "font_italic": null,
+          "fill_color": null,
+          "line_color": null,
+          "text_color": null
+        },
+        {
+          "type": "text",
+          "bbox": {
+            "x_in": 12.655,
+            "y_in": 6.81,
+            "w_in": 0.69,
+            "h_in": 0.69,
+            "x_pct": 94.91,
+            "y_pct": 90.8,
+            "w_pct": 5.18,
+            "h_pct": 9.2
+          },
+          "text_sample": "3",
+          "font_family": null,
+          "font_size_pt": null,
+          "font_bold": null,
+          "font_italic": null,
+          "fill_color": null,
+          "line_color": null,
+          "text_color": null
+        }
+      ]
+    },
+    {
+      "slide_index": 4,
+      "background": null,
+      "elements": [
+        {
+          "type": "text",
+          "bbox": {
+            "x_in": 0.422,
+            "y_in": 0.921,
+            "w_in": 7.34,
+            "h_in": 4.389,
+            "x_pct": 3.17,
+            "y_pct": 12.28,
+            "w_pct": 55.05,
+            "h_pct": 58.52
+          },
+          "text_sample": "Overcoming nervousness",
+          "font_family": null,
+          "font_size_pt": null,
+          "font_bold": null,
+          "font_italic": null,
+          "fill_color": null,
+          "line_color": null,
+          "text_color": null
+        },
+        {
+          "type": "text",
+          "bbox": {
+            "x_in": 0.804,
+            "y_in": 5.309,
+            "w_in": 6.571,
+            "h_in": 0.714,
+            "x_pct": 6.03,
+            "y_pct": 70.79,
+            "w_pct": 49.28,
+            "h_pct": 9.52
+          },
+          "text_sample": "Confidence-building strategies",
+          "font_family": null,
+          "font_size_pt": null,
+          "font_bold": null,
+          "font_italic": null,
+          "fill_color": null,
+          "line_color": null,
+          "text_color": null
+        },
+        {
+          "type": "shape",
+          "bbox": {
+            "x_in": 8.166,
+            "y_in": 0.94,
+            "w_in": 4.729,
+            "h_in": 5.45,
+            "x_pct": 61.25,
+            "y_pct": 12.53,
+            "w_pct": 35.47,
+            "h_pct": 72.67
+          },
+          "text_sample": null,
+          "font_family": null,
+          "font_size_pt": null,
+          "font_bold": null,
+          "font_italic": null,
+          "fill_color": null,
+          "line_color": null,
+          "text_color": null
+        },
+        {
+          "type": "text",
+          "bbox": {
+            "x_in": 12.655,
+            "y_in": 6.81,
+            "w_in": 0.69,
+            "h_in": 0.69,
+            "x_pct": 94.91,
+            "y_pct": 90.8,
+            "w_pct": 5.18,
+            "h_pct": 9.2
+          },
+          "text_sample": "4",
+          "font_family": null,
+          "font_size_pt": null,
+          "font_bold": null,
+          "font_italic": null,
+          "fill_color": null,
+          "line_color": null,
+          "text_color": null
+        }
+      ]
+    },
+    {
+      "slide_index": 5,
+      "background": null,
+      "elements": [
+        {
+          "type": "text",
+          "bbox": {
+            "x_in": 0.701,
+            "y_in": 0.58,
+            "w_in": 11.928,
+            "h_in": 1.272,
+            "x_pct": 5.26,
+            "y_pct": 7.73,
+            "w_pct": 89.46,
+            "h_pct": 16.96
+          },
+          "text_sample": "Engaging the audience",
+          "font_family": null,
+          "font_size_pt": null,
+          "font_bold": null,
+          "font_italic": null,
+          "fill_color": null,
+          "line_color": null,
+          "text_color": null
+        },
+        {
+          "type": "text",
+          "bbox": {
+            "x_in": 0.701,
+            "y_in": 2.097,
+            "w_in": 11.928,
+            "h_in": 3.653,
+            "x_pct": 5.26,
+            "y_pct": 27.96,
+            "w_pct": 89.46,
+            "h_pct": 48.71
+          },
+          "text_sample": "Techniques for connecting  Make eye contact with your audience to create a sense of intimacy and involvement Weave relatable stories into your presentation using narratives that\u00a0ma",
+          "font_family": null,
+          "font_size_pt": null,
+          "font_bold": null,
+          "font_italic": null,
+          "fill_color": null,
+          "line_color": null,
+          "text_color": null
+        },
+        {
+          "type": "text",
+          "bbox": {
+            "x_in": 12.655,
+            "y_in": 6.81,
+            "w_in": 0.69,
+            "h_in": 0.69,
+            "x_pct": 94.91,
+            "y_pct": 90.8,
+            "w_pct": 5.18,
+            "h_pct": 9.2
+          },
+          "text_sample": "5",
+          "font_family": null,
+          "font_size_pt": null,
+          "font_bold": null,
+          "font_italic": null,
+          "fill_color": null,
+          "line_color": null,
+          "text_color": null
+        }
+      ]
+    },
+    {
+      "slide_index": 6,
+      "background": null,
+      "elements": [
+        {
+          "type": "text",
+          "bbox": {
+            "x_in": 1.779,
+            "y_in": 1.339,
+            "w_in": 9.776,
+            "h_in": 4.065,
+            "x_pct": 13.34,
+            "y_pct": 17.85,
+            "w_pct": 73.32,
+            "h_pct": 54.2
+          },
+          "text_sample": "Selecting \u000bvisual aids",
+          "font_family": null,
+          "font_size_pt": null,
+          "font_bold": null,
+          "font_italic": null,
+          "fill_color": null,
+          "line_color": null,
+          "text_color": null
+        },
+        {
+          "type": "text",
+          "bbox": {
+            "x_in": 2.69,
+            "y_in": 5.487,
+            "w_in": 7.952,
+            "h_in": 0.714,
+            "x_pct": 20.18,
+            "y_pct": 73.16,
+            "w_pct": 59.64,
+            "h_pct": 9.52
+          },
+          "text_sample": "Enhancing your presentation",
+          "font_family": null,
+          "font_size_pt": null,
+          "font_bold": null,
+          "font_italic": null,
+          "fill_color": null,
+          "line_color": null,
+          "text_color": null
+        }
+      ]
+    },
+    {
+      "slide_index": 7,
+      "background": null,
+      "elements": [
+        {
+          "type": "text",
+          "bbox": {
+            "x_in": 0.701,
+            "y_in": 0.63,
+            "w_in": 11.928,
+            "h_in": 1.009,
+            "x_pct": 5.26,
+            "y_pct": 8.4,
+            "w_pct": 89.46,
+            "h_pct": 13.45
+          },
+          "text_sample": "Effective delivery techniques",
+          "font_family": null,
+          "font_size_pt": null,
+          "font_bold": null,
+          "font_italic": null,
+          "fill_color": null,
+          "line_color": null,
+          "text_color": null
+        },
+        {
+          "type": "text",
+          "bbox": {
+            "x_in": 0.972,
+            "y_in": 2.562,
+            "w_in": 5.33,
+            "h_in": 3.275,
+            "x_pct": 7.29,
+            "y_pct": 34.16,
+            "w_pct": 39.98,
+            "h_pct": 43.67
+          },
+          "text_sample": "Voice modulation is a powerful tool in public speaking. It involves varying pitch, tone, and volume to convey emotion, emphasize points, and maintain interest.  Pitch variation Ton",
+          "font_family": null,
+          "font_size_pt": null,
+          "font_bold": null,
+          "font_italic": null,
+          "fill_color": null,
+          "line_color": null,
+          "text_color": null
+        },
+        {
+          "type": "text",
+          "bbox": {
+            "x_in": 7.104,
+            "y_in": 2.562,
+            "w_in": 5.33,
+            "h_in": 3.271,
+            "x_pct": 53.28,
+            "y_pct": 34.16,
+            "w_pct": 39.98,
+            "h_pct": 43.61
+          },
+          "text_sample": "Effective body language enhances your message, making it more impactful and memorable. Meaningful eye contact Purposeful gestures Maintain good posture Control your expressions",
+          "font_family": null,
+          "font_size_pt": null,
+          "font_bold": null,
+          "font_italic": null,
+          "fill_color": null,
+          "line_color": null,
+          "text_color": null
+        },
+        {
+          "type": "text",
+          "bbox": {
+            "x_in": 12.655,
+            "y_in": 6.81,
+            "w_in": 0.69,
+            "h_in": 0.69,
+            "x_pct": 94.91,
+            "y_pct": 90.8,
+            "w_pct": 5.18,
+            "h_pct": 9.2
+          },
+          "text_sample": "7",
+          "font_family": null,
+          "font_size_pt": null,
+          "font_bold": null,
+          "font_italic": null,
+          "fill_color": null,
+          "line_color": null,
+          "text_color": null
+        }
+      ]
+    },
+    {
+      "slide_index": 8,
+      "background": null,
+      "elements": [
+        {
+          "type": "text",
+          "bbox": {
+            "x_in": 0.701,
+            "y_in": 0.63,
+            "w_in": 11.928,
+            "h_in": 1.009,
+            "x_pct": 5.26,
+            "y_pct": 8.4,
+            "w_pct": 89.46,
+            "h_pct": 13.45
+          },
+          "text_sample": "Navigating Q&A sessions",
+          "font_family": null,
+          "font_size_pt": null,
+          "font_bold": null,
+          "font_italic": null,
+          "fill_color": null,
+          "line_color": null,
+          "text_color": null
+        },
+        {
+          "type": "text",
+          "bbox": {
+            "x_in": 0.972,
+            "y_in": 2.562,
+            "w_in": 7.396,
+            "h_in": 3.275,
+            "x_pct": 7.29,
+            "y_pct": 34.16,
+            "w_pct": 55.47,
+            "h_pct": 43.67
+          },
+          "text_sample": "Maintaining composure during the Q&A session is essential for projecting confidence and authority. Consider the following tips for staying composed: Stay calm Actively listen Pause",
+          "font_family": null,
+          "font_size_pt": null,
+          "font_bold": null,
+          "font_italic": null,
+          "fill_color": null,
+          "line_color": null,
+          "text_color": null
+        },
+        {
+          "type": "text",
+          "bbox": {
+            "x_in": 9.073,
+            "y_in": 2.562,
+            "w_in": 3.35,
+            "h_in": 3.271,
+            "x_pct": 68.05,
+            "y_pct": 34.16,
+            "w_pct": 25.13,
+            "h_pct": 43.61
+          },
+          "text_sample": "Know your material in advance Anticipate common questions Rehearse your responses",
+          "font_family": null,
+          "font_size_pt": null,
+          "font_bold": null,
+          "font_italic": null,
+          "fill_color": null,
+          "line_color": null,
+          "text_color": null
+        },
+        {
+          "type": "text",
+          "bbox": {
+            "x_in": 12.655,
+            "y_in": 6.81,
+            "w_in": 0.69,
+            "h_in": 0.69,
+            "x_pct": 94.91,
+            "y_pct": 90.8,
+            "w_pct": 5.18,
+            "h_pct": 9.2
+          },
+          "text_sample": "8",
+          "font_family": null,
+          "font_size_pt": null,
+          "font_bold": null,
+          "font_italic": null,
+          "fill_color": null,
+          "line_color": null,
+          "text_color": null
+        }
+      ]
+    },
+    {
+      "slide_index": 9,
+      "background": null,
+      "elements": [
+        {
+          "type": "text",
+          "bbox": {
+            "x_in": 0.701,
+            "y_in": 0.441,
+            "w_in": 6.503,
+            "h_in": 2.427,
+            "x_pct": 5.26,
+            "y_pct": 5.88,
+            "w_pct": 48.77,
+            "h_pct": 32.36
+          },
+          "text_sample": "Speaking impact",
+          "font_family": null,
+          "font_size_pt": null,
+          "font_bold": null,
+          "font_italic": null,
+          "fill_color": null,
+          "line_color": null,
+          "text_color": null
+        },
+        {
+          "type": "text",
+          "bbox": {
+            "x_in": 0.701,
+            "y_in": 3.155,
+            "w_in": 6.503,
+            "h_in": 2.185,
+            "x_pct": 5.26,
+            "y_pct": 42.07,
+            "w_pct": 48.77,
+            "h_pct": 29.13
+          },
+          "text_sample": "Your ability to communicate effectively will leave a lasting impact on your audience Effectively communicating involves not only delivering a message but also resonating with the e",
+          "font_family": null,
+          "font_size_pt": null,
+          "font_bold": null,
+          "font_italic": null,
+          "fill_color": null,
+          "line_color": null,
+          "text_color": null
+        },
+        {
+          "type": "shape",
+          "bbox": {
+            "x_in": 8.068,
+            "y_in": 1.979,
+            "w_in": 3.85,
+            "h_in": 3.35,
+            "x_pct": 60.51,
+            "y_pct": 26.39,
+            "w_pct": 28.88,
+            "h_pct": 44.67
+          },
+          "text_sample": null,
+          "font_family": null,
+          "font_size_pt": null,
+          "font_bold": null,
+          "font_italic": null,
+          "fill_color": null,
+          "line_color": null,
+          "text_color": null
+        },
+        {
+          "type": "text",
+          "bbox": {
+            "x_in": 12.655,
+            "y_in": 6.81,
+            "w_in": 0.69,
+            "h_in": 0.69,
+            "x_pct": 94.91,
+            "y_pct": 90.8,
+            "w_pct": 5.18,
+            "h_pct": 9.2
+          },
+          "text_sample": "9",
+          "font_family": null,
+          "font_size_pt": null,
+          "font_bold": null,
+          "font_italic": null,
+          "fill_color": null,
+          "line_color": null,
+          "text_color": null
+        }
+      ]
+    },
+    {
+      "slide_index": 10,
+      "background": null,
+      "elements": [
+        {
+          "type": "text",
+          "bbox": {
+            "x_in": 0.701,
+            "y_in": 1.083,
+            "w_in": 11.928,
+            "h_in": 1.009,
+            "x_pct": 5.26,
+            "y_pct": 14.44,
+            "w_pct": 89.46,
+            "h_pct": 13.45
+          },
+          "text_sample": "Dynamic delivery",
+          "font_family": null,
+          "font_size_pt": null,
+          "font_bold": null,
+          "font_italic": null,
+          "fill_color": null,
+          "line_color": null,
+          "text_color": null
+        },
+        {
+          "type": "text",
+          "bbox": {
+            "x_in": 0.804,
+            "y_in": 3.346,
+            "w_in": 4.332,
+            "h_in": 2.698,
+            "x_pct": 6.03,
+            "y_pct": 44.61,
+            "w_pct": 32.49,
+            "h_pct": 35.97
+          },
+          "text_sample": "Learn to infuse energy into your delivery to leave a lasting impression One of the goals of effective communication is to motivate your audience",
+          "font_family": null,
+          "font_size_pt": null,
+          "font_bold": null,
+          "font_italic": null,
+          "fill_color": null,
+          "line_color": null,
+          "text_color": null
+        },
+        {
+          "type": "shape",
+          "bbox": {
+            "x_in": 5.521,
+            "y_in": 3.347,
+            "w_in": 7.109,
+            "h_in": 2.768,
+            "x_pct": 41.41,
+            "y_pct": 44.63,
+            "w_pct": 53.32,
+            "h_pct": 36.91
+          },
+          "text_sample": null,
+          "font_family": null,
+          "font_size_pt": null,
+          "font_bold": null,
+          "font_italic": null,
+          "fill_color": null,
+          "line_color": null,
+          "text_color": null
+        },
+        {
+          "type": "text",
+          "bbox": {
+            "x_in": 12.655,
+            "y_in": 6.81,
+            "w_in": 0.69,
+            "h_in": 0.69,
+            "x_pct": 94.91,
+            "y_pct": 90.8,
+            "w_pct": 5.18,
+            "h_pct": 9.2
+          },
+          "text_sample": "10",
+          "font_family": null,
+          "font_size_pt": null,
+          "font_bold": null,
+          "font_italic": null,
+          "fill_color": null,
+          "line_color": null,
+          "text_color": null
+        }
+      ]
+    },
+    {
+      "slide_index": 11,
+      "background": null,
+      "elements": [
+        {
+          "type": "text",
+          "bbox": {
+            "x_in": 0.701,
+            "y_in": 0.63,
+            "w_in": 11.928,
+            "h_in": 1.009,
+            "x_pct": 5.26,
+            "y_pct": 8.4,
+            "w_pct": 89.46,
+            "h_pct": 13.45
+          },
+          "text_sample": "Final tips & takeaways",
+          "font_family": null,
+          "font_size_pt": null,
+          "font_bold": null,
+          "font_italic": null,
+          "fill_color": null,
+          "line_color": null,
+          "text_color": null
+        },
+        {
+          "type": "text",
+          "bbox": {
+            "x_in": 0.899,
+            "y_in": 2.562,
+            "w_in": 3.35,
+            "h_in": 3.271,
+            "x_pct": 6.74,
+            "y_pct": 34.16,
+            "w_pct": 25.13,
+            "h_pct": 43.61
+          },
+          "text_sample": "Continue improving Seek feedback Reflect on performance Explore new techniques Set personal goals Iterate and adapt",
+          "font_family": null,
+          "font_size_pt": null,
+          "font_bold": null,
+          "font_italic": null,
+          "fill_color": null,
+          "line_color": null,
+          "text_color": null
+        },
+        {
+          "type": "text",
+          "bbox": {
+            "x_in": 5.052,
+            "y_in": 2.562,
+            "w_in": 7.247,
+            "h_in": 3.275,
+            "x_pct": 37.89,
+            "y_pct": 34.16,
+            "w_pct": 54.35,
+            "h_pct": 43.67
+          },
+          "text_sample": "Consistent rehearsal Strengthen your familiarity Refine delivery style Pacing, tone, and emphasis Timing and transitions Aim for seamless, professional delivery Practice audience E",
+          "font_family": null,
+          "font_size_pt": null,
+          "font_bold": null,
+          "font_italic": null,
+          "fill_color": null,
+          "line_color": null,
+          "text_color": null
+        },
+        {
+          "type": "text",
+          "bbox": {
+            "x_in": 12.655,
+            "y_in": 6.81,
+            "w_in": 0.69,
+            "h_in": 0.69,
+            "x_pct": 94.91,
+            "y_pct": 90.8,
+            "w_pct": 5.18,
+            "h_pct": 9.2
+          },
+          "text_sample": "11",
+          "font_family": null,
+          "font_size_pt": null,
+          "font_bold": null,
+          "font_italic": null,
+          "fill_color": null,
+          "line_color": null,
+          "text_color": null
+        }
+      ]
+    },
+    {
+      "slide_index": 12,
+      "background": null,
+      "elements": [
+        {
+          "type": "text",
+          "bbox": {
+            "x_in": 0.417,
+            "y_in": 3.366,
+            "w_in": 4.669,
+            "h_in": 2.307,
+            "x_pct": 3.13,
+            "y_pct": 44.88,
+            "w_pct": 35.02,
+            "h_pct": 30.76
+          },
+          "text_sample": "Speaking engagement \u000bmetrics",
+          "font_family": null,
+          "font_size_pt": null,
+          "font_bold": null,
+          "font_italic": null,
+          "fill_color": null,
+          "line_color": null,
+          "text_color": null
+        },
+        {
+          "type": "shape",
+          "bbox": {
+            "x_in": 5.425,
+            "y_in": 1.342,
+            "w_in": 7.47,
+            "h_in": 4.612,
+            "x_pct": 40.69,
+            "y_pct": 17.89,
+            "w_pct": 56.03,
+            "h_pct": 61.49
+          },
+          "text_sample": null,
+          "font_family": null,
+          "font_size_pt": null,
+          "font_bold": null,
+          "font_italic": null,
+          "fill_color": null,
+          "line_color": null,
+          "text_color": null
+        },
+        {
+          "type": "text",
+          "bbox": {
+            "x_in": 12.655,
+            "y_in": 6.81,
+            "w_in": 0.69,
+            "h_in": 0.69,
+            "x_pct": 94.91,
+            "y_pct": 90.8,
+            "w_pct": 5.18,
+            "h_pct": 9.2
+          },
+          "text_sample": "12",
+          "font_family": null,
+          "font_size_pt": null,
+          "font_bold": null,
+          "font_italic": null,
+          "fill_color": null,
+          "line_color": null,
+          "text_color": null
+        }
+      ]
+    },
+    {
+      "slide_index": 13,
+      "background": null,
+      "elements": [
+        {
+          "type": "text",
+          "bbox": {
+            "x_in": 1.055,
+            "y_in": 0.358,
+            "w_in": 6.487,
+            "h_in": 6.082,
+            "x_pct": 7.91,
+            "y_pct": 4.77,
+            "w_pct": 48.65,
+            "h_pct": 81.09
+          },
+          "text_sample": "Thank you",
+          "font_family": null,
+          "font_size_pt": null,
+          "font_bold": null,
+          "font_italic": null,
+          "fill_color": null,
+          "line_color": null,
+          "text_color": null
+        },
+        {
+          "type": "text",
+          "bbox": {
+            "x_in": 8.44,
+            "y_in": 1.956,
+            "w_in": 3.394,
+            "h_in": 3.382,
+            "x_pct": 63.3,
+            "y_pct": 26.08,
+            "w_pct": 25.46,
+            "h_pct": 45.09
+          },
+          "text_sample": "Mirjam Nilsson\u200b mirjam@contoso.com www.contoso.com",
+          "font_family": null,
+          "font_size_pt": null,
+          "font_bold": null,
+          "font_italic": null,
+          "fill_color": null,
+          "line_color": null,
+          "text_color": null
+        },
+        {
+          "type": "text",
+          "bbox": {
+            "x_in": 12.655,
+            "y_in": 6.81,
+            "w_in": 0.69,
+            "h_in": 0.69,
+            "x_pct": 94.91,
+            "y_pct": 90.8,
+            "w_pct": 5.18,
+            "h_pct": 9.2
+          },
+          "text_sample": "13",
+          "font_family": null,
+          "font_size_pt": null,
+          "font_bold": null,
+          "font_italic": null,
+          "fill_color": null,
+          "line_color": null,
+          "text_color": null
+        }
+      ]
+    }
+  ],
+  "patterns": {
+    "dominant_layouts": [
+      {
+        "name": "section divider",
+        "slide_indices": [
+          2,
+          4,
+          5,
+          9,
+          10,
+          13
+        ],
+        "confidence": 0.86
+      },
+      {
+        "name": "cover slide",
+        "slide_indices": [
+          1,
+          3,
+          6,
+          12
+        ],
+        "confidence": 0.71
+      },
+      {
+        "name": "title + body",
+        "slide_indices": [
+          7,
+          11
+        ],
+        "confidence": 0.55
+      },
+      {
+        "name": "title + two-column",
+        "slide_indices": [
+          8
+        ],
+        "confidence": 0.48
+      }
+    ],
+    "typography_roles": [],
+    "component_candidates": [
+      {
+        "name": "footer note",
+        "signature": "text:10x10",
+        "occurrences": 11,
+        "confidence": 0.84
+      },
+      {
+        "name": "footer note",
+        "signature": "text:90x10",
+        "occurrences": 4,
+        "confidence": 0.57
+      },
+      {
+        "name": "title block",
+        "signature": "text:40x40",
+        "occurrences": 3,
+        "confidence": 0.54
+      },
+      {
+        "name": "title block",
+        "signature": "text:30x40",
+        "occurrences": 3,
+        "confidence": 0.54
+      }
+    ],
+    "spacing_rhythm": {
+      "left_margins_in": [
+        0.79,
+        12.65,
+        8.14,
+        0.42,
+        4.32,
+        5.47
+      ],
+      "right_margins_in": [
+        0.0,
+        0.78,
+        5.99,
+        0.44,
+        1.46,
+        4.33
+      ],
+      "top_offsets_in": [
+        6.81,
+        1.11,
+        0.54,
+        2.56,
+        3.26,
+        2.01
+      ],
+      "vertical_gaps_in": [
+        0.94,
+        0.11,
+        1.47
+      ],
+      "column_gaps_in": [
+        0.8,
+        0.23,
+        3.65
+      ],
+      "alignment_anchors_in": [
+        0.79,
+        12.65,
+        8.14,
+        0.42,
+        4.32,
+        5.47
+      ]
+    },
+    "common_alignments": [
+      "flush-right",
+      "centered",
+      "flush-left"
+    ],
+    "color_roles": {
+      "neutrals": [],
+      "primary": [],
+      "accents": []
+    },
+    "diagnostics": {
+      "scores": {
+        "typography": 0.0,
+        "layout": 0.62,
+        "components": 1.0,
+        "color": 0.0,
+        "coverage": 0.81,
+        "overall": 0.48
+      },
+      "warnings": [
+        "Limited explicit colors found; theme inheritance may be partial."
+      ],
+      "evidence": {
+        "slides": 13,
+        "elements": 42,
+        "text_elements": 37,
+        "color_tokens": 0,
+        "layout_clusters": 4,
+        "component_candidates": 4
+      }
+    }
+  }
+}
