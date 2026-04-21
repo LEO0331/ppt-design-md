@@ -53,8 +53,8 @@ def health() -> dict[str, str]:
     return {"status": "ok"}
 
 
-@app.post("/extract", response_model=ExtractResponse)
-async def extract(file: UploadFile = File(...)) -> ExtractResponse:
+async def _read_validated_pptx_upload(file: UploadFile) -> tuple[str, bytes]:
+    filename = file.filename or "upload.pptx"
     suffix = Path(file.filename or "upload").suffix.lower()
     if suffix != ".pptx":
         raise HTTPException(status_code=400, detail="Only .pptx files are supported")
@@ -71,14 +71,19 @@ async def extract(file: UploadFile = File(...)) -> ExtractResponse:
         raise HTTPException(status_code=413, detail="Uploaded file exceeds size limit")
     if not data.startswith(b"PK"):
         raise HTTPException(status_code=400, detail="Invalid PPTX file content")
+    return filename, data
 
+
+@app.post("/extract", response_model=ExtractResponse)
+async def extract(file: UploadFile = File(...)) -> ExtractResponse:
+    filename, data = await _read_validated_pptx_upload(file)
     with tempfile.NamedTemporaryFile(suffix=".pptx", delete=True) as tmp:
         tmp.write(data)
         tmp.flush()
         try:
             analysis = extract_pptx(tmp.name)
             design_md = generate_design_md(analysis)
-            run_id = save_run(file.filename or "upload.pptx", design_md, analysis)
+            run_id = save_run(filename, design_md, analysis)
         except Exception as exc:
             raise HTTPException(status_code=422, detail="Could not parse PPTX file") from exc
 
@@ -94,33 +99,19 @@ async def extract_batch(files: list[UploadFile] = File(...)) -> BatchExtractResp
 
     results: list[BatchItemResponse] = []
     for file in files:
-        suffix = Path(file.filename or "upload").suffix.lower()
-        if suffix != ".pptx":
-            raise HTTPException(status_code=400, detail=f"Only .pptx files are supported: {file.filename}")
-        if file.content_type and file.content_type not in {
-            "application/vnd.openxmlformats-officedocument.presentationml.presentation",
-            "application/octet-stream",
-        }:
-            raise HTTPException(status_code=400, detail=f"Unsupported content type: {file.filename}")
-        data = await file.read()
-        if not data:
-            raise HTTPException(status_code=400, detail=f"Uploaded file is empty: {file.filename}")
-        if len(data) > MAX_UPLOAD_BYTES:
-            raise HTTPException(status_code=413, detail=f"Uploaded file exceeds size limit: {file.filename}")
-        if not data.startswith(b"PK"):
-            raise HTTPException(status_code=400, detail=f"Invalid PPTX file content: {file.filename}")
+        filename, data = await _read_validated_pptx_upload(file)
         with tempfile.NamedTemporaryFile(suffix=".pptx", delete=True) as tmp:
             tmp.write(data)
             tmp.flush()
             try:
                 analysis = extract_pptx(tmp.name)
                 design_md = generate_design_md(analysis)
-                run_id = save_run(file.filename or "upload.pptx", design_md, analysis)
+                run_id = save_run(filename, design_md, analysis)
             except Exception as exc:
-                raise HTTPException(status_code=422, detail=f"Could not parse file: {file.filename}") from exc
+                raise HTTPException(status_code=422, detail=f"Could not parse file: {filename}") from exc
         results.append(
             BatchItemResponse(
-                filename=file.filename or "upload.pptx",
+                filename=filename,
                 design_md=design_md,
                 analysis=analysis,
                 run_id=run_id,

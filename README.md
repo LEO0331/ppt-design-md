@@ -1,144 +1,99 @@
 # pptx-design-md
 
-`pptx-design-md` is a production-oriented MVP that extracts a PowerPoint deck's visual system and generates a `design.md` file for LLM-guided slide generation.
+Turn an existing PowerPoint deck into a reusable design system prompt for AI slide generation.
 
-## What It Does
-- Accepts a `.pptx` file via API, CLI, or minimal web UI.
-- Supports batch `.pptx` extraction via API/CLI.
-- Parses slide geometry and shape/text blocks with `python-pptx`.
-- Extracts reusable design tokens and recurring patterns:
-  - canvas size and aspect ratio
-  - colors, fonts, font sizes
-  - text element roles (heuristic)
-  - layout archetypes
-  - spacing rhythm and alignments
-  - repeating component signatures
-  - extraction confidence diagnostics
-- Produces:
-  - `design.md` (LLM-friendly guidance)
-  - optional `analysis.json` structured output
-  - persisted run artifacts under `backend/runs/<run_id>/`
+`pptx-design-md` analyzes a `.pptx` file and produces:
+- `design.md` (human- and LLM-readable style guide)
+- `analysis.json` (structured extraction output)
 
-## Scope and Limitations
-This MVP intentionally favors robust heuristics over full PPT reverse engineering.
+This helps teams generate new slides that look consistent with an existing brand/template without manually reverse-engineering every slide.
 
-Known limitations:
-- Theme inheritance is partial; inherited defaults may be missing.
-- Grouped objects are not fully flattened.
-- Charts are handled as `chart_like` blocks, not semantic chart specs.
-- SmartArt is treated approximately as visual blocks.
-- Font/color values inherited from masters/themes may not always resolve perfectly.
+## Who This Is For
+- Founders and operators creating investor update decks fast
+- Marketing teams reusing brand style across campaigns
+- Consultants/analysts generating client-ready slides with consistent visual language
+- Anyone using ChatGPT/Claude to draft slides and needing style consistency
 
-## Repository Structure
-```text
-pptx-design-md/
-├─ backend/
-│  ├─ app/
-│  │  ├─ __init__.py
-│  │  ├─ main.py
-│  │  ├─ extractor.py
-│  │  ├─ design_md.py
-│  │  ├─ heuristics.py
-│  │  ├─ models.py
-│  │  ├─ cli.py
-│  │  └─ utils.py
-│  ├─ tests/
-│  │  ├─ conftest.py
-│  │  ├─ test_design_md.py
-│  │  ├─ test_extractor.py
-│  │  └─ test_api.py
-│  ├─ requirements.txt
-│  └─ pyproject.toml
-├─ frontend/
-│  ├─ index.html
-│  ├─ app.js
-│  └─ styles.css
-├─ examples/
-│  ├─ README.md
-│  └─ sample-output.design.md
-├─ .gitignore
-├─ README.md
-└─ AGENTS.md
-```
+## What You Get
+- Canvas and aspect ratio guidance
+- Typography hierarchy suggestions (title/body/caption roles)
+- Color palette candidates (plus confidence diagnostics)
+- Spacing rhythm and alignment anchors
+- Recurring layout archetypes and component patterns
 
-## Local Setup
-### 1) Backend setup
+## Product Scope (MVP)
+- Input: one or many `.pptx` files
+- Output: pragmatic design abstraction, not pixel-perfect reconstruction
+- Charts/SmartArt/grouped objects: treated as visual blocks where needed
+
+## Quick Start (Local)
+
+### 1) Backend
 ```bash
 cd backend
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
-```
-
-### 2) Run backend
-```bash
-cd backend
 uvicorn app.main:app --reload --port 8000
 ```
 
-API endpoints:
-- `GET /health`
-- `POST /extract` (multipart `file=.pptx`)
-- `POST /extract/batch` (multipart repeated `files=.pptx`)
-- `POST /design/save` (save edited markdown for a prior run)
-
-Security-related environment variables:
-- `PPTX_ALLOWED_ORIGINS` (comma-separated CORS allowlist; default local frontend origins only)
-- `PPTX_MAX_UPLOAD_BYTES` (default `20971520`, i.e. 20MB per file)
-- `PPTX_MAX_BATCH_FILES` (default `10`)
-
-### 3) Run frontend
-Serve `frontend/` with any static server, e.g.:
+### 2) Frontend
 ```bash
 cd frontend
 python3 -m http.server 4173
 ```
-Then open `http://127.0.0.1:4173`.
 
-By default frontend calls `http://127.0.0.1:8000`.
-Frontend supports single/batch upload, inline `design.md` editing, and save-back to persisted run storage.
+Open: `http://127.0.0.1:4173`
 
-## CLI Usage
+Default API target is `http://127.0.0.1:8000`.
+
+## API
+- `GET /health`
+- `POST /extract` (multipart field: `file`)
+- `POST /extract/batch` (multipart repeated field: `files`)
+- `POST /design/save` (save edited markdown by `run_id`)
+
+## CLI
+
+Single file:
 ```bash
 cd backend
-python -m app.cli ../examples/sample.pptx --output ../design.md --json ../analysis.json
+python -m app.cli ../examples/sample1.pptx --output ../examples/sample1.generated.design.md --json ../examples/sample1.generated.analysis.json --persist-run
 ```
 
-Batch mode:
+Batch:
 ```bash
 cd backend
 python -m app.cli --batch-dir ../examples --output-dir ../examples/out --persist-run
 ```
 
-## Tests
+## Deployment
+
+### Backend (Render/Railway)
+- Root directory: `backend`
+- Build command: `pip install -r requirements.txt`
+- Start command: `uvicorn app.main:app --host 0.0.0.0 --port $PORT`
+
+Recommended env vars:
+- `PPTX_ALLOWED_ORIGINS=https://YOUR_FRONTEND_DOMAIN`
+- `PPTX_MAX_UPLOAD_BYTES=20971520`
+- `PPTX_MAX_BATCH_FILES=10`
+
+### Frontend (Vercel/static host)
+- Deploy `frontend/` as static files
+- Point frontend to backend by setting `window.API_BASE_URL` before loading `app.js`, or by editing the default in `frontend/app.js`
+
+## Quality & Testing
 ```bash
 cd backend
+source .venv/bin/activate
 pytest -q
 ```
 
-Included tests:
-- markdown generation from mocked analysis
-- extraction smoke test from generated PPTX
-- API smoke test (`/health`, `/extract`)
+Current backend test coverage target is exceeded (85%+).
 
-## Heuristics Implemented
-- Typography role inference (`title`, `subtitle`, `section header`, `body`, `caption/footnote`) using size distribution and position hints.
-- Ranked color palette from text/fill/line colors with weighting and role bucketing (neutrals/primary/accents).
-- Theme-aware font/color fallback from slide master theme where available.
-- Recursive group-shape traversal (group contents contribute to analysis).
-- Layout archetype inference from per-slide shape distribution (`cover`, `section divider`, `title + two-column`, `image + text`, `metrics/cards`, `title + body`).
-- Spacing rhythm clustering for margins, offsets, vertical/column gaps, and alignment anchors.
-- Component candidates from repeated type/size signatures across slides.
-- Pattern diagnostics with score breakdown and evidence counts.
-
-## Deployment Notes
-### Frontend on Vercel + backend elsewhere
-- Deploy `frontend/` as static site on Vercel.
-- Point frontend API base to your deployed backend domain.
-- Ensure CORS is allowed on backend.
-
-### Backend on Railway/Render/etc.
-- Deploy `backend/` as Python service.
-- Install `requirements.txt`.
-- Start command example:
-  - `uvicorn app.main:app --host 0.0.0.0 --port $PORT`
+## Known Limitations
+- Theme inheritance is partial in some decks
+- SmartArt/chart semantics are approximate
+- Some master-level font/color defaults may not fully resolve
+- Output is guidance-oriented, not a full PPT reconstruction
