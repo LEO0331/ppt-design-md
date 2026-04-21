@@ -1,0 +1,126 @@
+{
+  "presentation": {
+    "slide_width_in": 10.0,
+    "slide_height_in": 7.5,
+    "aspect_ratio": 1.333
+  },
+  "theme": {
+    "candidate_fonts": [],
+    "candidate_colors": [],
+    "common_font_sizes_pt": [],
+    "theme_fonts": [],
+    "theme_colors": []
+  },
+  "slides": [
+    {
+      "slide_index": 1,
+      "background": null,
+      "elements": [
+        {
+          "type": "text",
+          "bbox": {
+            "x_in": 0.5,
+            "y_in": 0.3,
+            "w_in": 9.0,
+            "h_in": 1.25,
+            "x_pct": 5.0,
+            "y_pct": 4.0,
+            "w_pct": 90.0,
+            "h_pct": 16.67
+          },
+          "text_sample": null,
+          "font_family": null,
+          "font_size_pt": null,
+          "font_bold": null,
+          "font_italic": null,
+          "fill_color": null,
+          "line_color": null,
+          "text_color": null
+        },
+        {
+          "type": "text",
+          "bbox": {
+            "x_in": 1.25,
+            "y_in": 0.938,
+            "w_in": 5.0,
+            "h_in": 0.938,
+            "x_pct": 12.5,
+            "y_pct": 12.51,
+            "w_pct": 50.0,
+            "h_pct": 12.51
+          },
+          "text_sample": "Executive Summary",
+          "font_family": null,
+          "font_size_pt": null,
+          "font_bold": null,
+          "font_italic": null,
+          "fill_color": null,
+          "line_color": null,
+          "text_color": null
+        }
+      ]
+    }
+  ],
+  "patterns": {
+    "dominant_layouts": [
+      {
+        "name": "cover slide",
+        "slide_indices": [
+          1
+        ],
+        "confidence": 0.9
+      }
+    ],
+    "typography_roles": [],
+    "component_candidates": [],
+    "spacing_rhythm": {
+      "left_margins_in": [
+        0.5,
+        1.25
+      ],
+      "right_margins_in": [
+        0.5,
+        3.75
+      ],
+      "top_offsets_in": [
+        0.3,
+        0.94
+      ],
+      "vertical_gaps_in": [],
+      "column_gaps_in": [],
+      "alignment_anchors_in": [
+        0.5,
+        1.25
+      ]
+    },
+    "common_alignments": [],
+    "color_roles": {
+      "neutrals": [],
+      "primary": [],
+      "accents": []
+    },
+    "diagnostics": {
+      "scores": {
+        "typography": 0.0,
+        "layout": 1.0,
+        "components": 0.0,
+        "color": 0.0,
+        "coverage": 0.5,
+        "overall": 0.33
+      },
+      "warnings": [
+        "Low slide count reduces archetype confidence.",
+        "Limited explicit colors found; theme inheritance may be partial.",
+        "No repeating component signatures crossed threshold."
+      ],
+      "evidence": {
+        "slides": 1,
+        "elements": 2,
+        "text_elements": 2,
+        "color_tokens": 0,
+        "layout_clusters": 1,
+        "component_candidates": 0
+      }
+    }
+  }
+}

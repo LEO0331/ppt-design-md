@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>pptx-design-md</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="ambient"></div>
+    <main class="shell">
+      <header class="hero">
+        <div class="hero-top">
+          <p class="kicker">PPTX STYLE EXTRACTION</p>
+          <button id="themeToggleBtn" type="button" class="btn" aria-pressed="false">Dark mode</button>
+        </div>
+        <h1>pptx-design-md</h1>
+        <p class="lede">
+          Upload one or many decks, inspect structured analysis, and iteratively refine a production-ready
+          <code>design.md</code>.
+        </p>
+      </header>
+
+      <section id="dropzone" class="dropzone" tabindex="0" role="button" aria-label="Upload PPTX files">
+        <input id="fileInput" type="file" accept=".pptx" multiple hidden />
+        <div class="dropzone-top">
+          <span class="drop-pill">Drop .pptx files</span>
+          <button id="browseBtn" type="button" class="btn btn-accent">Browse files</button>
+        </div>
+        <p class="drop-copy">Drag and drop decks here to extract reusable visual rules.</p>
+      </section>
+
+      <section class="results" id="resultsPanel">
+        <div class="results-head">
+          <h2>Batch Results</h2>
+          <p id="batchMeta">No files analyzed yet.</p>
+        </div>
+        <div id="resultTabs" class="result-tabs" aria-label="Batch result selection"></div>
+      </section>
+
+      <section class="workspace">
+        <article class="panel panel-editor">
+          <div class="panel-head">
+            <h2>design.md Editor</h2>
+            <div class="actions">
+              <button id="copyBtn" type="button" class="btn" disabled>Copy</button>
+              <button id="downloadBtn" type="button" class="btn" disabled>Download</button>
+              <button id="saveEditedBtn" type="button" class="btn btn-accent" disabled>Save edited</button>
+            </div>
+          </div>
+          <textarea id="designEditor" rows="20" spellcheck="false"></textarea>
+        </article>
+
+        <article class="panel panel-json">
+          <div class="panel-head">
+            <h2>analysis.json</h2>
+            <button id="toggleJsonBtn" type="button" class="btn" disabled>Show/Hide</button>
+          </div>
+          <section id="jsonSection" class="hidden">
+            <pre id="jsonOut"></pre>
+          </section>
+        </article>
+      </section>
+
+      <footer class="statusline" id="status" aria-live="polite">Ready.</footer>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
