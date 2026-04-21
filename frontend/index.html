@@ -16,8 +16,7 @@
         </div>
         <h1>pptx-design-md</h1>
         <p class="lede">
-          Upload one or many decks, inspect structured analysis, and iteratively refine a production-ready
-          <code>design.md</code>.
+          Upload one or many decks, inspect structured analysis, and iteratively refine a production-ready design.md.
         </p>
       </header>
 
@@ -65,6 +64,13 @@
       <footer class="statusline" id="status" aria-live="polite">Ready.</footer>
     </main>
 
+    <script src="./env.js"></script>
+    <script>
+      window.API_BASE_URL =
+        (window.__APP_CONFIG__ && window.__APP_CONFIG__.API_BASE_URL) ||
+        window.API_BASE_URL ||
+        "http://127.0.0.1:8000";
+    </script>
     <script src="./app.js"></script>
   </body>
 </html>

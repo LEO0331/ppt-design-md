@@ -1,0 +1,11 @@
+{
+  "name": "pptx-design-md-frontend",
+  "framework": null,
+  "buildCommand": "printf 'window.__APP_CONFIG__={API_BASE_URL:\"%s\"};\\n' \"$API_BASE_URL\" > frontend/env.js",
+  "outputDirectory": "frontend",
+  "installCommand": "",
+  "cleanUrls": true,
+  "env": {
+    "API_BASE_URL": "https://YOUR_RENDER_BACKEND.onrender.com"
+  }
+}

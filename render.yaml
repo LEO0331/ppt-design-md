@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: pptx-design-md-backend
+    runtime: python
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PPTX_ALLOWED_ORIGINS
+        value: https://YOUR_FRONTEND_DOMAIN.vercel.app
+      - key: PPTX_MAX_UPLOAD_BYTES
+        value: "20971520"
+      - key: PPTX_MAX_BATCH_FILES
+        value: "10"
