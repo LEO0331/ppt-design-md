@@ -1,0 +1,45 @@
+name: Lighthouse Frontend Audit
+
+on:
+  pull_request:
+    paths:
+      - "frontend/**"
+      - ".lighthouserc.json"
+      - ".github/workflows/lighthouse.yml"
+      - "package.json"
+      - "package-lock.json"
+  workflow_dispatch:
+
+jobs:
+  lighthouse:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run Lighthouse CI
+        id: lighthouse
+        uses: treosh/lighthouse-ci-action@v12
+        with:
+          configPath: ./.lighthouserc.json
+          uploadArtifacts: true
+          temporaryPublicStorage: true
+
+      - name: Publish dashboard links in job summary
+        if: always()
+        run: |
+          {
+            echo "## Lighthouse Temporary Dashboard";
+            echo "";
+            echo "${{ steps.lighthouse.outputs.links }}";
+          } >> "$GITHUB_STEP_SUMMARY"
