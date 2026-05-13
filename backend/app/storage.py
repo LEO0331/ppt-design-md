@@ -46,7 +46,9 @@ def save_edited_design(run_id: str, design_md: str) -> Path:
 
     run_dir = (RUNS_DIR / run_id).resolve()
     runs_root = RUNS_DIR.resolve()
-    if not str(run_dir).startswith(str(runs_root)):
+    try:
+        run_dir.relative_to(runs_root)
+    except ValueError:
         raise FileNotFoundError(f"Run not found: {run_id}")
     if not run_dir.exists():
         raise FileNotFoundError(f"Run not found: {run_id}")

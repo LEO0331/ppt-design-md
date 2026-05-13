@@ -45,7 +45,7 @@ def _write_single(pptx_path: Path, output: Path, json_path: Path | None, persist
 
 
 def _run_batch(batch_dir: Path, output_dir: Path, persist_run: bool) -> None:
-    files = sorted(batch_dir.glob("*.pptx"))
+    files = sorted(path for path in batch_dir.iterdir() if path.is_file() and path.suffix.lower() == ".pptx")
     if not files:
         raise SystemExit(f"No .pptx files found in {batch_dir}")
     output_dir.mkdir(parents=True, exist_ok=True)

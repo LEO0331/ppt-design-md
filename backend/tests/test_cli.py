@@ -80,6 +80,19 @@ def test_run_batch_generates_outputs_per_file(tmp_path: Path, monkeypatch: pytes
     assert (out_dir / "b.analysis.json").exists()
 
 
+def test_run_batch_accepts_uppercase_pptx_extension(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:
+    upper = tmp_path / "A.PPTX"
+    upper.write_bytes(b"PKfake")
+    monkeypatch.setattr(cli, "extract_pptx", lambda _: _analysis())
+    monkeypatch.setattr(cli, "generate_design_md", lambda _: "# DESIGN.md")
+
+    out_dir = tmp_path / "out"
+    cli._run_batch(tmp_path, out_dir, persist_run=False)
+
+    assert (out_dir / "A.design.md").exists()
+    assert (out_dir / "A.analysis.json").exists()
+
+
 def test_run_batch_persists_each_file_when_enabled(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:
     a = tmp_path / "a.pptx"
     b = tmp_path / "b.pptx"

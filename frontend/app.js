@@ -22,12 +22,32 @@ let batchResults = [];
 let activeIndex = 0;
 let currentPayload = null;
 
+function safeGetStoredTheme() {
+  try {
+    return localStorage.getItem(THEME_KEY);
+  } catch {
+    return null;
+  }
+}
+
+function safeSetStoredTheme(theme) {
+  try {
+    localStorage.setItem(THEME_KEY, theme);
+  } catch {
+    // Storage can be unavailable in hardened/private browsing contexts.
+  }
+}
+
 function resolveInitialTheme() {
-  const stored = localStorage.getItem(THEME_KEY);
+  const stored = safeGetStoredTheme();
   if (stored === "light" || stored === "dark") {
     return stored;
   }
-  return window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+  try {
+    return window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+  } catch {
+    return "light";
+  }
 }
 
 function applyTheme(theme) {
@@ -40,7 +60,7 @@ function applyTheme(theme) {
 function toggleTheme() {
   const current = document.documentElement.getAttribute("data-theme") || "light";
   const next = current === "dark" ? "light" : "dark";
-  localStorage.setItem(THEME_KEY, next);
+  safeSetStoredTheme(next);
   applyTheme(next);
 }
 
